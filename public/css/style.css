@@ -26,8 +26,6 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 80%;
-  height: 40vh;
 }
 
 input[type="text" i],
@@ -36,15 +34,16 @@ input[type="password" i] {
 }
 
 button {
-  background: linear-gradient(179.98deg, #cfb76f 0.01%, #000000 99.99%);
+  background: #cfb76f;
   border: 1px solid #000000;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
 
   width: 50%;
   color: #000000;
-  margin: 1em;
-  line-height: 4.5em;
+  margin: 0.5em;
+  line-height: 2em;
+  font-size: 36px;
 }
 
 input {
@@ -55,18 +54,18 @@ input {
 
   width: 50%;
   color: gray;
-  margin: 1em;
-  padding: 1em;
-  line-height: 4.5em;
+  margin: 0.5em;
+  line-height: 2em;
+  font-size: 36px;
 }
 
-@media only screen and (max-device-width: 420px) {
+@media screen and (max-width: 768px) {
   .container {
     flex-direction: column;
   }
 
   * {
-    font-size: 36px;
+    font-size: 30px;
   }
 
   .login-container,
@@ -76,6 +75,12 @@ input {
 
   form {
     margin: auto;
+  }
+  button {
+    font-size: 16;
+  }
+  input {
+    font-size: 16;
   }
 
   img {
