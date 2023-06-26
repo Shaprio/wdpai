@@ -11,5 +11,6 @@ Router::get('game', 'DefaultController');
 Router::get('rules', 'DefaultController');
 Router::get('addcard', 'DefaultController');
 Router::get('mycards', 'DefaultController');
+Router::post('login', 'SecurityController');
 
 Router::run($path);
