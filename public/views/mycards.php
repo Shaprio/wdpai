@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <head>
   <link rel="stylesheet" type="text/css" href="public/css/style.css" />
   <title>GAME PAGE</title>
@@ -7,10 +6,7 @@
   <div class="container">
     <div class="login-container">
       <form>
-        <div class="textbox">
-          Race the player across from you to finish a drink. The loser must take
-          another drink.
-        </div>
+          <img src="public/uploads/Screenshot_5.png">
         <button>Next card</button>
         <button>Delete</button>
         <button>Quit</button>

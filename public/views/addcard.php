@@ -6,10 +6,21 @@
 <body>
   <div class="container">
     <div class="login-container">
-      <form>
-        <textarea>Create your own card here.</textarea>
-        <button>Add card</button>
-        <button>Back</button>
+        <form action="addProject" method="POST" ENCTYPE="multipart/form-data">
+            <div class="messages">
+                <?php
+                if(isset($messages)){
+                    foreach($messages as $message) {
+                        echo $message;
+                    }
+                }
+                ?>
+            </div>
+            <input name="title" type="text" placeholder="title">
+            <textarea name="description" rows=5 placeholder="description"></textarea>
+
+            <input type="file" name="file"/><br/>
+            <button type="submit">send</button>
       </form>
     </div>
   </div>
