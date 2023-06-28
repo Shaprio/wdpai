@@ -10,9 +10,10 @@ Router::get('profil', 'DefaultController');
 Router::get('game', 'DefaultController');
 Router::get('rules', 'DefaultController');
 Router::get('addcard', 'DefaultController');
-Router::get('mycards', 'DefaultController');
+Router::get('projects', 'ProjectController');
 Router::post('login', 'SecurityController');
 Router::post('addProject', 'ProjectController');
+Router::post('register', 'SecurityController');
 
 
 Router::run($path);
