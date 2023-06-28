@@ -33,7 +33,7 @@ class ProjectController extends AppController {
                 dirname(__DIR__).self::UPLOAD_DIRECTORY.$_FILES['file']['name']
             );
 
-            // TODO create new project object and save it in database
+
             $project = new Project($_POST['title'], $_POST['description'], $_FILES['file']['name']);
             $this->projectRepository->addProject($project);
 
@@ -44,6 +44,21 @@ class ProjectController extends AppController {
         }
 
         return $this->render('add-project', ['messages' => $this->message]);
+    }
+
+    public function search()
+    {
+        $contentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : '';
+
+        if ($contentType === "application/json") {
+            $content = trim(file_get_contents("php://input"));
+            $decoded = json_decode($content, true);
+
+            header('Content-type: application/json');
+            http_response_code(200);
+
+            echo json_encode($this->projectRepository->getProjectByTitle($decoded['search']));
+        }
     }
 
     private function validate(array $file): bool

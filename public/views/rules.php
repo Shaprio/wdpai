@@ -15,7 +15,7 @@
           aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
           eos, qui ratione
         </div>
-        <a href="public/views/profil.html"><button>Back</button></a>
+        <a href="/profil">Back</a>
       </form>
     </div>
   </div>

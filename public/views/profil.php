@@ -7,17 +7,13 @@
   <div class="container">
     <div class="login-container">
       <form>
-        <a href="public/views/login.html">
+        <a href="/login">
           <img src="public/img/avatar.svg" alt="Avatar" class="avatar"
         /></a>
-        <button>Play</button>
-        <button>Rules</button>
-        <button>Add card</button>
-        <button>My cards</button>
-        <label class="switch">
-          <input type="checkbox" />
-          <span class="slider round"></span>
-        </label>
+          <a href="/game">Game</a>
+          <a href="/rules">Rules</a>
+          <a href="/addcard">Add card</a>
+          <a href="/projects">Cards</a>
       </form>
     </div>
   </div>
