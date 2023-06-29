@@ -12,26 +12,28 @@
 <body>
 <div class="container">
 
-    <main>
-        <header>
-            <div class="search-bar">
-                <input placeholder="search project">
-            </div>
-            <a href="/profil">Back</a>
-        </header>
-        <section class="projects">
-            <?php foreach ($projects as $project): ?>
-                <div id="project-1">
-                    <img src="public/uploads/<?= $project->getImage(); ?>">
-                    <div>
-                        <h2><?= $project->getTitle(); ?></h2>
-                        <p><?= $project->getDescription(); ?></p>
-
-                    </div>
+        <main>
+            <header>
+                <div class="search-bar">
+                    <input placeholder="search project">
                 </div>
-            <?php endforeach; ?>
-        </section>
-    </main>
+                <a href="/profil">Back</a>
+            </header>
+            <section class="projects">
+                <?php foreach ($projects as $project): ?>
+                    <div id="project-1">
+                        <img src="public/uploads/<?= $project->getImage(); ?>">
+                        <div>
+                            <h2><?= $project->getTitle(); ?></h2>
+                            <p><?= $project->getDescription(); ?></p>
+
+
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </section>
+        </main>
+
 </div>
 </body>
 

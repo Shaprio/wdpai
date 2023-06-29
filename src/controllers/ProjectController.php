@@ -24,6 +24,12 @@ class ProjectController extends AppController {
         $projects = $this->projectRepository->getProjects();
         $this->render('projects', ['projects' => $projects]);
     }
+    public function game()
+    {
+        $projects = $this->projectRepository->getProjects();
+        $this->render('game', ['projects' => $projects]);
+    }
+
 
     public function addProject()
     {
