@@ -90,16 +90,16 @@ Dzięki takiemu podziałowi odpowiedzialności i strukturze projektu opartej na 
 
 Wstrzykiwanie zależności (DI) to technika, która polega na przekazywaniu obiektów wymaganych przez daną klasę zamiast tworzenia ich bezpośrednio wewnątrz klasy. Dzięki zastosowaniu DI, klasy nie muszą martwić się o to, jak ich zależności są tworzone lub zaimplementowane, co prowadzi do luźnego powiązania i większej elastyczności w projektowaniu aplikacji.
 
-W naszym przypadku, struktura katalogowa "src/controllers", "src/models" i "src/repository" może korzystać z kontenera DI do zarządzania zależnościami. Kontener DI, taki jak popularne biblioteki czy frameworki, umożliwia łatwe skonfigurowanie i dostarczenie potrzebnych zależności dla klas w aplikacji. Dzięki temu można łatwo wymieniać implementacje poszczególnych komponentów i testować je niezależnie, dostarczając odpowiednie zależności w kontekście testowym.
+W tym przypadku, struktura katalogowa "src/controllers", "src/models" i "src/repository" może korzystać z kontenera DI do zarządzania zależnościami. Kontener DI, taki jak popularne biblioteki czy frameworki, umożliwia łatwe skonfigurowanie i dostarczenie potrzebnych zależności dla klas w aplikacji. Dzięki temu można łatwo wymieniać implementacje poszczególnych komponentów i testować je niezależnie, dostarczając odpowiednie zależności w kontekście testowym.
 
-Korzystanie z DI w naszym projekcie ma wiele korzyści. Po pierwsze, zapewnia większą modularność, skalowalność i testowalność kodu. Poprzez oddzielenie tworzenia zależności od samego kodu, możemy łatwo wprowadzać zmiany w implementacji poszczególnych komponentów. Ponadto, dzięki DI można łatwo testować poszczególne komponenty, dostarczając im zależności w kontrolowany sposób w czasie testów.
+Korzystanie z DI w tym projekcie ma wiele korzyści. Po pierwsze, zapewnia większą modularność, skalowalność i testowalność kodu. Poprzez oddzielenie tworzenia zależności od samego kodu, możemy łatwo wprowadzać zmiany w implementacji poszczególnych komponentów. Ponadto, dzięki DI można łatwo testować poszczególne komponenty, dostarczając im zależności w kontrolowany sposób w czasie testów.
 
 Wniosek jest taki, że wykorzystanie wstrzykiwania zależności (DI) przynosi wiele korzyści, takich jak luźne powiązania, elastyczność, modularność i łatwość testowania. Pozwala również na łatwe wprowadzanie zmian w implementacji komponentów oraz minimalizuje wpływ tych zmian na inne części aplikacji, ponieważ konfiguracja zależności odbywa się na poziomie kontenera DI, a nie w samym kodzie.
 
 
 -Repository Pettern:
 
-Folder "src/repository" w naszej aplikacji wykorzystuje kolejny wzorzec projektowy, który nazywa się wzorcem Repository. Ten wzorzec umożliwia separację logiki dostępu do danych od pozostałych części aplikacji w kontekście wzorca Model-View-Controller (MVC). Repozytorium zawarte w tym folderze odpowiada za obsługę operacji CRUD (Create, Read, Update, Delete) na danych przechowywanych w bazie danych.
+Folder "src/repository" w tej aplikacji wykorzystuje kolejny wzorzec projektowy, który nazywa się wzorcem Repository. Ten wzorzec umożliwia separację logiki dostępu do danych od pozostałych części aplikacji w kontekście wzorca Model-View-Controller (MVC). Repozytorium zawarte w tym folderze odpowiada za obsługę operacji CRUD (Create, Read, Update, Delete) na danych przechowywanych w bazie danych.
 
 Głównym celem wzorca Repository jest zapewnienie jednolitego interfejsu do manipulacji danymi, niezależnie od źródła danych, bez konieczności bezpośredniego kontaktu z bazą danych. Repozytorium działa jako pośrednik między resztą aplikacji a bazą danych, dostarczając metody i funkcje, które umożliwiają operacje na danych.
 
@@ -128,3 +128,7 @@ Na przykład, w klasie Database.php istnieje statyczna metoda getInstance(), kt�
 Dzięki wykorzystaniu wzorca Singleton można uniknąć tworzenia zbędnych instancji połączenia z bazą danych i zagwarantować, że wszystkie komponenty aplikacji korzystają z tego samego połączenia. To z kolei przyczynia się do oszczędności zasobów i utrzymania spójności połączenia w całej aplikacji.
 
 
+Rozwijanie projektu:
+-dodatkowe zabezpieczenia
+-dodanie opcji usunięcia konta
+-dodanie możliwość gry bez towrzenia konta...
