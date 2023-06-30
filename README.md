@@ -128,6 +128,12 @@ Na przykład, w klasie Database.php istnieje statyczna metoda getInstance(), kt�
 Dzięki wykorzystaniu wzorca Singleton można uniknąć tworzenia zbędnych instancji połączenia z bazą danych i zagwarantować, że wszystkie komponenty aplikacji korzystają z tego samego połączenia. To z kolei przyczynia się do oszczędności zasobów i utrzymania spójności połączenia w całej aplikacji.
 
 
+KOD DO STWORZENIA BAZY
+
+![alt text](./Readme_png/dbcode.png)
+
+
+
 Rozwijanie projektu:
 -dodatkowe zabezpieczenia
 -dodanie opcji usunięcia konta
